@@ -23,8 +23,8 @@ module Holidays
       2 => [{:wday => 1, :week => 3, :name => "Presidents' Day", :regions => [:hotcards]}],
       5 => [{:wday => 1, :week => -1, :name => "Memorial Day", :regions => [:hotcards]}],
       7 => [{:mday => 4, :observed => lambda { |date| Holidays.to_weekday_if_weekend(date) }, :observed_id => "to_weekday_if_weekend", :name => "Independence Day", :regions => [:hotcards]}],
-      9 => [{:wday => 1, :week => 1, :name => "Labor Day", :regions => [:hotcards]},
-            {:wday => 4, :week => 4, :name => "Thanksgiving", :regions => [:hotcards]}],
+      9 => [{:wday => 1, :week => 1, :name => "Labor Day", :regions => [:hotcards]}],
+      11 => [{:wday => 4, :week => 4, :name => "Thanksgiving", :regions => [:hotcards]}],
       12 => [{:mday => 25, :observed => lambda { |date| Holidays.to_weekday_if_weekend(date) }, :observed_id => "to_weekday_if_weekend", :name => "Christmas Day", :regions => [:hotcards]}]
       }
     end
