@@ -34,6 +34,7 @@ months:
     week: 1
     regions: [hotcards]
     wday: 1
+  11:
   - name: Thanksgiving
     week: 4
     regions: [hotcards]
