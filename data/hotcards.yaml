@@ -1,0 +1,60 @@
+# United States holiday definitions for the Ruby Holiday gem.
+#
+# Updated: 2008-11-24.
+# Source:  http://en.wikipedia.org/wiki/Public_holidays_of_the_United_States
+--- 
+months:
+  0: 
+  - name: Easter Sunday
+    regions: [hotcards]
+    function: easter(year)
+    type: informal
+  1: 
+  - name: New Year's Day
+    regions: [hotcards]
+    mday: 1
+    observed: to_weekday_if_weekend
+  2: 
+  - name: Presidents' Day
+    week: 3
+    regions: [hotcards]
+    wday: 1
+  5: 
+  - name: Memorial Day
+    week: -1
+    regions: [hotcards]
+    wday: 1
+  7: 
+  - name: Independence Day
+    regions: [hotcards]
+    mday: 4
+    observed: to_weekday_if_weekend
+  9: 
+  - name: Labor Day
+    week: 1
+    regions: [hotcards]
+    wday: 1
+  - name: Thanksgiving
+    week: 4
+    regions: [hotcards]
+    wday: 4
+  12: 
+  - name: Christmas Day
+    regions: [hotcards]
+    mday: 25
+    observed: to_weekday_if_weekend
+methods:
+  us_inauguration_day: |
+    # January 20, every fourth year, following Presidential election
+    def self.us_inauguration_day(year)
+      year % 4 == 1 ? 20 : nil
+    end
+tests: |
+    {Date.civil(2008,1,1) => 'New Year\'s Day', 
+     Date.civil(2008,5,26) => 'Memorial Day',
+     Date.civil(2008,7,4) => 'Independence Day',
+     Date.civil(2008,9,1) => 'Labor Day',
+     Date.civil(2008,11,27) => 'Thanksgiving',
+     Date.civil(2008,12,25) => 'Christmas Day'}.each do |date, name|
+      assert_equal name, (Holidays.on(date, :us)[0] || {})[:name]
+    end

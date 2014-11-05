@@ -38,6 +38,7 @@ defs:
   RO: ['ro.yaml']
   SE: ['se.yaml']
   US: ['us.yaml', 'north_america_informal.yaml']
+  Hotcards: ['hotcards.yaml']
   United_Nations: ['united_nations.yaml']
   UPS: ['ups.yaml']
   ZA: ['za.yaml']
