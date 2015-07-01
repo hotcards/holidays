@@ -28,6 +28,9 @@ months:
     regions: [hotcards]
     wday: 1
   7: 
+  - name: Independence Day Eve
+    regions: [hotcards]
+    mday: 3
   - name: Independence Day
     regions: [hotcards]
     mday: 4
