@@ -45,7 +45,14 @@ months:
     week: 4
     regions: [hotcards]
     wday: 4
+  - name: Day After Thanksgiving
+    week: 4
+    regions: [hotcards]
+    wday: 5
   12: 
+  - name: Christmas Eve
+    regions: [hotcards]
+    mday: 24
   - name: Christmas Day
     regions: [hotcards]
     mday: 25

@@ -26,8 +26,10 @@ module Holidays
       7 => [{:mday => 3, :name => "Independence Day Eve", :regions => [:hotcards]},
             {:mday => 4, :observed => lambda { |date| Holidays.to_weekday_if_weekend(date) }, :observed_id => "to_weekday_if_weekend", :name => "Independence Day", :regions => [:hotcards]}],
       9 => [{:wday => 1, :week => 1, :name => "Labor Day", :regions => [:hotcards]}],
-      11 => [{:wday => 4, :week => 4, :name => "Thanksgiving", :regions => [:hotcards]}],
-      12 => [{:mday => 25, :observed => lambda { |date| Holidays.to_weekday_if_weekend(date) }, :observed_id => "to_weekday_if_weekend", :name => "Christmas Day", :regions => [:hotcards]}]
+      11 => [{:wday => 4, :week => 4, :name => "Thanksgiving", :regions => [:hotcards]},
+            {:wday => 5, :week => 4, :name => "Day After Thanksgiving", :regions => [:hotcards]}],
+      12 => [{:mday => 24, :name => "Christmas Eve", :regions => [:hotcards]},
+            {:mday => 25, :observed => lambda { |date| Holidays.to_weekday_if_weekend(date) }, :observed_id => "to_weekday_if_weekend", :name => "Christmas Day", :regions => [:hotcards]}]
       }
     end
   end
