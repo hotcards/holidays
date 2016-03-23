@@ -19,7 +19,7 @@ module Holidays
     def self.holidays_by_month
       {
               0 => [{:function => lambda { |year| Holidays.easter(year) }, :function_id => "easter(year)", :type => :informal, :name => "Easter Sunday", :regions => [:hotcards]},
-            {:function => lambda { |year| Holidays.easter(year)-2 }, :function_id => "easter(year)-2", :name => "Easter Monday", :regions => [:hotcards]}],
+            {:function => lambda { |year| Holidays.easter(year)+1 }, :function_id => "easter(year)+1", :name => "Easter Monday", :regions => [:hotcards]}],
       1 => [{:mday => 1, :observed => lambda { |date| Holidays.to_weekday_if_weekend(date) }, :observed_id => "to_weekday_if_weekend", :name => "New Year's Day", :regions => [:hotcards]}],
       2 => [{:wday => 1, :week => 3, :name => "Presidents' Day", :regions => [:hotcards]}],
       5 => [{:wday => 1, :week => -1, :name => "Memorial Day", :regions => [:hotcards]}],

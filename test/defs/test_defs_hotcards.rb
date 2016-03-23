@@ -7,7 +7,7 @@ require File.expand_path(File.dirname(__FILE__)) + '/../test_helper'
 class HotcardsDefinitionTests < Test::Unit::TestCase  # :nodoc:
 
   def test_hotcards
-{Date.civil(2008,1,1) => 'New Year\'s Day', 
+{Date.civil(2008,1,1) => 'New Year\'s Day',
  Date.civil(2008,5,26) => 'Memorial Day',
  Date.civil(2008,7,4) => 'Independence Day',
  Date.civil(2008,9,1) => 'Labor Day',

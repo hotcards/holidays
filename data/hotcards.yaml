@@ -2,32 +2,32 @@
 #
 # Updated: 2008-11-24.
 # Source:  http://en.wikipedia.org/wiki/Public_holidays_of_the_United_States
---- 
+---
 months:
-  0: 
+  0:
   - name: Easter Sunday
     regions: [hotcards]
     function: easter(year)
     type: informal
   - name: Easter Monday
     regions: [hotcards]
-    function: easter(year)-2
-  1: 
+    function: easter(year)+1
+  1:
   - name: New Year's Day
     regions: [hotcards]
     mday: 1
     observed: to_weekday_if_weekend
-  2: 
+  2:
   - name: Presidents' Day
     week: 3
     regions: [hotcards]
     wday: 1
-  5: 
+  5:
   - name: Memorial Day
     week: -1
     regions: [hotcards]
     wday: 1
-  7: 
+  7:
   - name: Independence Day Eve
     regions: [hotcards]
     mday: 3
@@ -35,7 +35,7 @@ months:
     regions: [hotcards]
     mday: 4
     observed: to_weekday_if_weekend
-  9: 
+  9:
   - name: Labor Day
     week: 1
     regions: [hotcards]
@@ -49,7 +49,7 @@ months:
     week: 4
     regions: [hotcards]
     wday: 5
-  12: 
+  12:
   - name: Christmas Eve
     regions: [hotcards]
     mday: 24
@@ -64,7 +64,7 @@ methods:
       year % 4 == 1 ? 20 : nil
     end
 tests: |
-    {Date.civil(2008,1,1) => 'New Year\'s Day', 
+    {Date.civil(2008,1,1) => 'New Year\'s Day',
      Date.civil(2008,5,26) => 'Memorial Day',
      Date.civil(2008,7,4) => 'Independence Day',
      Date.civil(2008,9,1) => 'Labor Day',
