@@ -1,33 +1,13 @@
-# United States holiday definitions for the Ruby Holiday gem.
+# Hotcards holiday definitions for the Ruby Holiday gem.
 #
-# Updated: 2008-11-24.
-# Source:  http://en.wikipedia.org/wiki/Public_holidays_of_the_United_States
 ---
 months:
-  0:
-  - name: Easter Sunday
-    regions: [hotcards]
-    function: easter(year)
-    type: informal
-  1:
-  - name: New Year's Day
-    regions: [hotcards]
-    mday: 1
-    observed: to_weekday_if_weekend
-  2:
-  - name: Presidents' Day
-    week: 3
-    regions: [hotcards]
-    wday: 1
   5:
   - name: Memorial Day
     week: -1
     regions: [hotcards]
     wday: 1
   7:
-  - name: Independence Day Eve
-    regions: [hotcards]
-    mday: 3
   - name: Independence Day
     regions: [hotcards]
     mday: 4
@@ -47,19 +27,10 @@ months:
     regions: [hotcards]
     wday: 5
   12:
-  - name: Christmas Eve
-    regions: [hotcards]
-    mday: 24
   - name: Christmas Day
     regions: [hotcards]
     mday: 25
     observed: to_weekday_if_weekend
-methods:
-  us_inauguration_day: |
-    # January 20, every fourth year, following Presidential election
-    def self.us_inauguration_day(year)
-      year % 4 == 1 ? 20 : nil
-    end
 tests: |
     {Date.civil(2008,1,1) => 'New Year\'s Day',
      Date.civil(2008,5,26) => 'Memorial Day',
