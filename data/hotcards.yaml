@@ -2,11 +2,11 @@
 #
 ---
 months:
-  1:
-  - name: New Years Day (Moved)
-    week: 1
+  1: 
+  - name: New Year's Day
     regions: [hotcards]
-    wday: 2
+    mday: 1
+    observed: to_weekday_if_weekend
   5:
   - name: Memorial Day
     week: -1
