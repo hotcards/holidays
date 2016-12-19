@@ -2,6 +2,11 @@
 #
 ---
 months:
+  1:
+  - name: New Years Day
+    week: 1
+    regions: [hotcards]
+    wday: 1
   5:
   - name: Memorial Day
     week: -1
@@ -29,7 +34,7 @@ months:
   12:
   - name: Christmas Day
     regions: [hotcards]
-    mday: 25
+    mday: 26
     observed: to_weekday_if_weekend
 tests: |
     {Date.civil(2008,1,1) => 'New Year\'s Day',
