@@ -3,10 +3,10 @@
 ---
 months:
   1:
-  - name: New Years Day
+  - name: New Years Day (Moved)
     week: 1
     regions: [hotcards]
-    wday: 1
+    wday: 2
   5:
   - name: Memorial Day
     week: -1
