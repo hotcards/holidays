@@ -5,8 +5,7 @@ months:
   1: 
   - name: New Year's Day
     regions: [hotcards]
-    mday: 1
-    observed: to_weekday_if_weekend
+    wday: 1
   5:
   - name: Memorial Day
     week: -1
