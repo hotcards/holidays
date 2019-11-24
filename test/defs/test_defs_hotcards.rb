@@ -12,8 +12,10 @@ class HotcardsDefinitionTests < Test::Unit::TestCase  # :nodoc:
  Date.civil(2008,7,4) => 'Independence Day',
  Date.civil(2008,9,1) => 'Labor Day',
  Date.civil(2008,11,27) => 'Thanksgiving',
+ Date.civil(2019,11,28) => 'Thanksgiving',
+ Date.civil(2019,11,29) => 'Day After Thanksgiving',
  Date.civil(2008,12,25) => 'Christmas Day'}.each do |date, name|
-  assert_equal name, (Holidays.on(date, :us)[0] || {})[:name]
+  assert_equal name, (Holidays.on(date, :hotcards)[0] || {})[:name]
 end
 
   end
